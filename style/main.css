@@ -87,7 +87,6 @@ html,
 body {
   width: 100%;
   height: 100%;
-
 }
 
 .fon {
@@ -114,9 +113,6 @@ body::-webkit-scrollbar {
   align-content: space-between;
 }
 
-
-
-
 .row>a {
   font-family: "Gilroy";
   text-decoration: none;
@@ -132,6 +128,11 @@ body::-webkit-scrollbar {
   opacity: 0.7;
 }
 
+.animated-button2:hover {
+  transition: 0.4s;
+  box-shadow: inset 0px 0px 15px white;
+  opacity: 0.7;
+}
 
 .animated-button {
   display: inline;
@@ -142,6 +143,25 @@ body::-webkit-scrollbar {
   transition: 0.4s;
   opacity: 1;
   margin-top: -8px;
+
+  text-decoration: none;
+
+  color: white;
+}
+
+.animated-button2 {
+  display: inline;
+  border-style: solid;
+  border-width: 3px;
+  padding: 5px 40px;
+  border-radius: 40px;
+  transition: 0.4s;
+  opacity: 1;
+  margin-top: -8px;
+  font-family: "Gilroy";
+  text-decoration: none;
+  color: white;
+
 }
 
 .content {
@@ -168,6 +188,7 @@ body::-webkit-scrollbar {
   font-family: "Gilroy";
   font-size: 2.6em;
   font-weight: 300;
+  margin-bottom: 20px;
 }
 
 .lotos {
@@ -263,6 +284,23 @@ footer>.flex-container>.contacts>a>.instagram {
   }
 }
 
+@media (max-width: 500px) {
+  .about {
+   
+  }
+
+  .sign{
+  
+  }
+
+  .row{
+
+  }
+
+  .animated-button {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 500px) and (max-height:800px) {
   footer {
@@ -284,10 +322,6 @@ footer>.flex-container>.contacts>a>.instagram {
   .mouse {
     display: none;
   }
-
-  .container {
-    padding-top: 150px;
-  }
 }
 
 
@@ -304,5 +338,9 @@ footer>.flex-container>.contacts>a>.instagram {
 
   .row>a {
     margin-right: 50px;
+  }
+
+  .container {
+    padding-top: 150px;
   }
 }
