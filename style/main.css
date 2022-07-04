@@ -181,7 +181,7 @@ body::-webkit-scrollbar {
 }
 
 footer {
-  height: 260px;
+  height: 320px;
   width: 100%;
   background-color: #009D9D;
   color: white;
@@ -288,12 +288,10 @@ footer>.flex-container>.contacts>a>.instagram {
   .container {
     padding-top: 150px;
   }
-
-  .row {
-    
-  }
-
 }
+
+@
+
 
 
 @media (max-width:880px) {
