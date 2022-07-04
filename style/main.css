@@ -112,7 +112,6 @@ body::-webkit-scrollbar {
   flex-flow: row wrap;
   justify-content: space-around;
   align-content: space-between;
-  padding-top: 150px;
 }
 
 
@@ -287,7 +286,7 @@ footer>.flex-container>.contacts>a>.instagram {
   }
 
   .container {
-   
+    padding-top: 150px;
   }
 }
 
