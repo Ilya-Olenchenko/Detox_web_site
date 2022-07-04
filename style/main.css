@@ -290,11 +290,11 @@ footer>.flex-container>.contacts>a>.instagram {
   }
 }
 
-@
 
 
 
-@media (max-width:880px) {
+
+@media (max-width:1000px) {
 
   .lotos {
     display: none;
