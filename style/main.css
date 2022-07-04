@@ -10,6 +10,13 @@
   /* Путь к файлу со шрифтом */
 }
 
+@font-face {
+  font-family: Gilroy;
+  /* Имя шрифта */
+  src: url(../fonts/GILROY-REGULAR.TTF);
+  /* Путь к файлу со шрифтом */
+}
+
 .about,
 .sign {
   display: inline-block;
