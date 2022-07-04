@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+
+}
+
+@font-face {
+  font-family: mbf;
+  /* Имя шрифта */
+  src: url(../fonts/mbf-canno.ttf);
+  /* Путь к файлу со шрифтом */
+}
+
+.about,
+.sign {
+  display: inline-block;
+  color: white;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.about:after,
+.sign:after {
+  display: block;
+  content: "";
+  background-color: white;
+  height: 1px;
+  width: 0%;
+  left: 50%;
+  position: absolute;
+  -webkit-transition: width .3s ease-in-out;
+  -moz--transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.about:hover:after,
+.about:focus:after,
+.sign:hover:after,
+.sign:focus:after {
+  width: 100%;
+}
+
+.mouse {
+  width: 48px;
+  height: 86px;
+  border: 2px solid white;
+  border-radius: 100px;
+  position: absolute;
+  box-sizing: border-box;
+  margin-left: 50%;
+  margin-right: 50%;
+  top: 85%;
+}
+
+.mouse::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  background: url(../img/background.jpg) center no-repeat;
+  background-size: cover;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+.container {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-between;
+}
+
+
+.row {
+  margin-top: 20px;
+  position: absolute;
+  display: flex;
+  right: 0;
+}
+
+.row>a {
+  font-family: "Gilroy";
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-right: 130px;
+}
+
+
+.animated-button:hover {
+  transition: 0.4s;
+  box-shadow: inset 0px 0px 15px white;
+  opacity: 0.7;
+}
+
+
+.animated-button {
+  display: inline;
+  border-style: solid;
+  border-width: 3px;
+  padding: 5px 40px;
+  border-radius: 40px;
+  transition: 0.4s;
+  opacity: 1;
+  margin-top: -8px;
+}
+
+.content {
+  padding-top: 10%;
+  color: white;
+}
+
+.detox_h1 {
+  font-family: mbf;
+  font-weight: 100;
+  font-size: 12em;
+  margin: 0;
+  line-height: 0.8;
+}
+
+.content_p1 {
+  font-family: "Gilroy";
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: 5%;
+}
+
+.content_p2 {
+  font-family: "Gilroy";
+  font-size: 2.6em;
+  font-weight: 300;
+}
+
+.lotos {
+  /* padding-left: 20%; */
+  padding-top: 15%;
+}
+
+.img_lotos {
+  min-width: 400px;
+  max-width: 400px;
+}
+
+footer {
+  height: 30%;
+  width: 100%;
+  background-color: #009D9D;
+  color: white;
+  font-family: "Gilroy";
+  text-decoration: none;
+
+}
+
+footer>.flex-container>.help1>h3>a {
+  text-decoration: none;
+  color: white;
+}
+
+footer>.flex-container>.help1>a,
+footer>.flex-container>.help2>a
+ {
+  line-height: 1.5;
+    font-weight: 400;
+}
+
+
+footer>.flex-container>.help2>h3>a {
+  text-decoration: none;
+  color: white;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+footer>.flex-container>.help>p {
+  font-size: 1em;
+}
+
+
+footer>.flex-container>.contacts> a >.twitter {
+  margin: 0 20px;
+  width: 43px;
+}
+
+footer>.flex-container>.contacts> a >.facebook {
+  margin: 0 20px;
+  width: 24px;
+}
+
+footer>.flex-container>.contacts> a >.instagram {
+  margin: 0 20px;
+  width: 35px;
+}
+
+.copyright {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (max-width:1470px) {}
+
+@media (max-width:880px) {
+
+  .lotos {
+    display: none;
+  }
+
+  .container {
+    align-content: space-around;
+  }
+
+  .row>a {
+    margin-right: 50px;
+  }
+}
