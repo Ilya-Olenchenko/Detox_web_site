@@ -1,6 +1,5 @@
 * {
   margin: 0;
-
 }
 
 @font-face {
@@ -60,7 +59,7 @@
   box-sizing: border-box;
   margin-left: 50%;
   margin-right: 50%;
-  top: 85%;
+  top: 80%;
 }
 
 .mouse::before {
@@ -86,13 +85,19 @@
 
 html,
 body {
-  width: 100%;
-  height: 100%;
+width: 100%;
+height: 100%;
+}
+
+.fon{
+  background: url(../img/background.jpg) center no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 html {
-  background: url(../img/background.jpg) center no-repeat;
-  background-size: cover;
+
 }
 
 body::-webkit-scrollbar {
@@ -180,7 +185,7 @@ body::-webkit-scrollbar {
 }
 
 footer {
-  height:260px;
+  height: 260px;
   width: 100%;
   background-color: #009D9D;
   color: white;
@@ -194,10 +199,9 @@ footer>.flex-container>.help1>h3>a {
 }
 
 footer>.flex-container>.help1>a,
-footer>.flex-container>.help2>a
- {
+footer>.flex-container>.help2>a {
   line-height: 1.5;
-    font-weight: 400;
+  font-weight: 400;
 }
 
 
@@ -217,17 +221,17 @@ footer>.flex-container>.help>p {
 }
 
 
-footer>.flex-container>.contacts> a >.twitter {
+footer>.flex-container>.contacts>a>.twitter {
   margin: 0 20px;
   width: 43px;
 }
 
-footer>.flex-container>.contacts> a >.facebook {
+footer>.flex-container>.contacts>a>.facebook {
   margin: 0 20px;
   width: 24px;
 }
 
-footer>.flex-container>.contacts> a >.instagram {
+footer>.flex-container>.contacts>a>.instagram {
   margin: 0 20px;
   width: 35px;
 }
@@ -247,13 +251,27 @@ footer>.flex-container>.contacts> a >.instagram {
 }
 
 @media (max-height:520px) {
+
+  html {
+
+  }
+
   .lotos {
     display: none;
   }
+
   .content_p2 {
     display: none;
   }
+
+  footer {
+    height: 320px;
+  }
 }
+
+
+@media (max-width:500px) {}
+
 
 @media (max-width:880px) {
 
