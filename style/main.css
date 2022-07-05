@@ -341,6 +341,12 @@ footer>.flex-container>.contacts>a>.instagram {
   .mouse {
     display: none;
   }
+
+  .animated-button2{
+    margin-left: 0px;
+    font-size:1em;
+  }
+  
 }
 
 @media screen and (max-width: 1000px) and (max-height:780px){
