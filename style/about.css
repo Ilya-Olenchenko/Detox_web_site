@@ -14,7 +14,7 @@ body {
     display: flex;
     height: 80px;
     background: linear-gradient(90deg, rgba(8, 126, 140, 1) 56%, rgba(26, 26, 102, 1) 100%);
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
 }
 
@@ -67,7 +67,8 @@ body {
 
 
 
-@media (max-width: 590px) {
+
+@media (max-width: 500px) {
 
     .heder {}
 
@@ -80,14 +81,30 @@ body {
     }
 
     .menu li {
-        margin-right: 57px;
+        /* margin-right: 57px; */
         align-items: center;
     }
 
     .menu ul {
         margin-left: 0px;
     }
-    .menu li{
-        margin-right: 32px;
+
+    .menu li {
+        margin-right: 0px;
+    }
+
+    .heder_item {
+        display: flex;
+        margin-left: 0;
+    }
+
+    .home {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .help {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
