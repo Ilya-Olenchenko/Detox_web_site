@@ -8,7 +8,6 @@ body {
     height: 100%;
 }
 
-
 .heder {
     width: 100%;
     display: flex;
@@ -16,39 +15,17 @@ body {
     background: linear-gradient(90deg, rgba(8, 126, 140, 1) 56%, rgba(26, 26, 102, 1) 100%);
     /* justify-content: space-between; */
     align-items: center;
+    justify-content: flex-end;
+
 }
 
-.heder_item {
-    display: flex;
-    margin-left: auto;
-}
-
-.menu {
-    display: flex;
-}
-
-.menu li {
-    margin-right: 100px;
-}
-
-.menu ul {
-    display: flex;
-    list-style: none;
-    align-content: center;
-    margin-left: 60px;
-}
-
-.menu a {
-    display: flex;
+.heder a {
     text-decoration: none;
     color: white;
     font-size: 20px;
 }
 
-
-
 .download_btn {
-    display: flex;
     border-style: solid;
     border-width: 3px;
     padding: 5px 40px;
@@ -56,7 +33,6 @@ body {
     border-color: white;
     transition: 0.4s;
     opacity: 1;
-    margin-top: -8px;
 }
 
 .download_btn:hover {
@@ -65,45 +41,20 @@ body {
     opacity: 0.7;
 }
 
-@media (max-width: 650px) {
+.item {
+    margin-right: 100px;
+}
 
+@media (max-width: 650px) {
     .heder {
-        justify-content:center;
+        justify-content: space-evenly;
     }
 
-    li .download_btn {
+    .heder .download_btn {
         display: none;
     }
 
-    .menu {
-        justify-content: space-around;
-    }
-
-    .menu li {
-        /* margin-right: 57px; */
-        align-items: center;
-    }
-
-    .menu ul {
-        margin-left: 0px;
-    }
-
-    .menu li {
+    .item {
         margin-right: 0px;
-    }
-
-    .heder_item {
-        display: flex;
-        margin-left: 0;
-    }
-
-    .home {
-        margin-left: -20px;
-        margin-right: 20px;
-    }
-
-    .help {
-        margin-left: 20px;
-        margin-right: 10px;
     }
 }
