@@ -1,3 +1,15 @@
+function loadData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, 4000);
+    })
+}
+
+loadData()
+    .then(() => {
+        let preloaderEl = document.getElementById('preloader_malc');
+        preloaderEl.classList.add('hidden');
+        preloaderEl.classList.remove('visible');
+    });
 
 const windowOuterWidth = window.outerWidth
 const windowOuterHeight = window.outerHeight
@@ -22,11 +34,3 @@ else {
     });
 }
 
-
-window.onload = function() {
-
-    setTimeout(function() {
-        document.getElementById("preloader_malc").style.display = "none";
-    }, 4000);
-
-};
