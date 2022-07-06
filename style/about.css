@@ -1,3 +1,13 @@
+/*Шрифты*/
+
+@font-face {
+    font-family: Gilroy;
+    /* Имя шрифта */
+    src: url(../fonts/GILROY-REGULAR.TTF);
+    /* Путь к файлу со шрифтом */
+  }
+
+
 * {
     margin: 0;
 }
@@ -8,26 +18,64 @@ body {
     height: 100%;
 }
 
+/*Start-Header*/
+
 .heder {
     width: 100%;
     display: flex;
-    height: 80px;
+    height: 65px;
     background: linear-gradient(90deg, rgba(8, 126, 140, 1) 56%, rgba(26, 26, 102, 1) 100%);
     /* justify-content: space-between; */
     align-items: center;
     justify-content: flex-end;
-
 }
 
-.heder a {
+
+.home,
+.help {
+  display: inline-block;
+  color: white;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.home:after,
+.help:after {
+  display: block;
+  content: "";
+  background-color: white;
+  height: 1px;
+  width: 0%;
+  left: 50%;
+  position: absolute;
+  -webkit-transition: width .3s ease-in-out;
+  -moz--transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.home:hover:after,
+.home:focus:after,
+.help:hover:after,
+.help:focus:after {
+  width: 100%;
+}
+
+
+.heder a{
     text-decoration: none;
     color: white;
     font-size: 20px;
+    font-family: "Gilroy";
 }
 
 .download_btn {
     border-style: solid;
-    border-width: 3px;
+    border-width: 2px;
     padding: 5px 40px;
     border-radius: 40px;
     border-color: white;
@@ -58,3 +106,56 @@ body {
         margin-right: 0px;
     }
 }
+
+/*End-Header*/
+
+
+/*Start-Content*/
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first_content{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    align-items: center;
+}
+
+.first_content p{
+    font-size: 40px;
+    font-family: "Gilroy";
+    letter-spacing: 1.5px;
+}
+
+.first_content_img{
+    width: 400px;
+}
+
+
+/*Second_content*/
+
+.second_content{
+    display: flex;
+    padding-top: 20px;
+}
+
+
+.second_content_img1{
+    margin-bottom: 100px;
+    width: 200px;
+    margin-left: 100px;
+}
+.second_content_img2{
+    margin-top: 100px;
+    width: 200px;
+    margin-right: 100px;
+}
+
+
+
+
+/*End-Content*/
