@@ -79,12 +79,15 @@ body {
         justify-content: space-around;
     }
 
-
     .menu li {
         margin-right: 57px;
         align-items: center;
     }
 
-    .menu ul {}
-
+    .menu ul {
+        margin-left: 0px;
+    }
+    .menu li{
+        margin-right: 32px;
+    }
 }
