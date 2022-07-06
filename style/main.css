@@ -283,49 +283,67 @@ footer>.flex-container>.contacts>a>.instagram {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
 }
- 
+
 .preloader_lotos {
-  height: 100px;
+  height: 200px;
   position: absolute;
   z-index: 999;
-} 
+}
 
 
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
 
-.water{
-  width:400px;
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.water {
+  width: 400px;
   height: 400px;
   background-color: skyblue;
   border-radius: 50%;
   position: relative;
-  box-shadow: inset 0 0 30px 0 rgba(0,0,0,.5), 0 4px 10px 0 rgba(0,0,0,.5);
+  box-shadow: inset 0 0 30px 0 rgba(0, 0, 0, .5), 0 4px 10px 0 rgba(0, 0, 0, .5);
   overflow: hidden;
 }
-.water:before, .water:after{
-  content:'';
+
+.water:before,
+.water:after {
+  content: '';
   position: absolute;
-  width:400px;
+  width: 400px;
   height: 400px;
-  top:-150px;
+  top: -90px;
   background-color: #fff;
 }
-.water:before{
+
+.water:before {
   border-radius: 45%;
-  background:rgba(255,255,255,.7);
-  animation:wave 5s linear infinite;
+  background: rgba(255, 255, 255, .7);
+  animation: wave 5s linear infinite;
 }
-.water:after{
+
+.water:after {
   border-radius: 35%;
-  background:rgba(255,255,255,.3);
-  animation:wave 5s linear infinite;
+  background: rgba(255, 255, 255, .3);
+  animation: wave 5s linear infinite;
 }
-@keyframes wave{
-  0%{
-      transform: rotate(0);
+
+@keyframes wave {
+  0% {
+    transform: rotate(0);
   }
-  100%{
-      transform: rotate(360deg);
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -377,15 +395,22 @@ footer>.flex-container>.contacts>a>.instagram {
   }
 
   .preloader_lotos {
-    
-    height: 100px;
-    }
 
-    
-.water{
-  width: 200px;
-  height: 200px;
-}
+    height: 80px;
+  }
+
+
+  .water {
+    width: 200px;
+    height: 200px;
+  }
+
+  .water:before,
+  .water:after {
+    width: 200px;
+    height: 200px;
+    top: -40px;
+  }
 }
 
 @media (max-width: 553px) {
@@ -429,11 +454,6 @@ footer>.flex-container>.contacts>a>.instagram {
   }
 }
 
-@media (max-height:600px) {
-  .mouse {
-    display: none;
-  }
-}
 
 @media (max-width:1000px) {
 
@@ -455,3 +475,9 @@ footer>.flex-container>.contacts>a>.instagram {
   }
 }
 
+
+@media (max-height:825px) {
+  .mouse {
+    display: none;
+  }
+}
