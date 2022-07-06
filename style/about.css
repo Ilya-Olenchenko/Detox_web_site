@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+.heder {
+    width: 100%;
+    display: flex;
+    height: 80px;
+    background: linear-gradient(90deg, rgba(8, 126, 140, 1) 56%, rgba(26, 26, 102, 1) 100%);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heder_item {
+    display: flex;
+    margin-left: auto;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    margin-right: 100px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    align-content: center;
+    margin-left: 60px;
+}
+
+.menu a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+.download_btn {
+    display: flex;
+    border-style: solid;
+    border-width: 3px;
+    padding: 5px 40px;
+    border-radius: 40px;
+    border-color: white;
+    transition: 0.4s;
+    opacity: 1;
+    margin-top: -8px;
+}
+
+.download_btn:hover {
+    transition: 0.4s;
+    box-shadow: inset 0px 0px 15px white;
+    opacity: 0.7;
+}
+
+
+
+@media (max-width: 590px) {
+
+    .heder {}
+
+    li .download_btn {
+        display: none;
+    }
+
+    .menu {
+        justify-content: space-around;
+    }
+
+
+    .menu li {
+        margin-right: 57px;
+        align-items: center;
+    }
+
+    .menu ul {}
+
+}
