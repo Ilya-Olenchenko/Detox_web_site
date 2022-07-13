@@ -240,7 +240,7 @@ body {
 
 /*Media-Content*/
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
     .three_content{
         align-items: center;
     }

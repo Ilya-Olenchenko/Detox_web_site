@@ -78,20 +78,144 @@ body {
     margin-right: 100px;
 }
 
-.FAQ{
+/*accordion*/
+
+.accordion__item {
+    margin-bottom: 3px;
+    border-radius: 10px;
+    box-shadow: 0 0.125rem 1rem rgb(0 0 0 / 15%);
+  }
+
+  .accordion__header {
+    font-family: "Gilroy";
+    font-size: 1.3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem  10px;
+    color: black;
+    font-weight: 500;
+    background-color: white;
+    border-top-left-radius:  10px;
+    border-top-right-radius:  10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+  }
+
+  .accordion__header::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    content: "\2228";
+    transition: transform 0.2s ease-out;
+  }
+
+  .accordion__item_show .accordion__header::after,
+  .accordion__item_slidedown .accordion__header::after {
+    transform: rotate(-180deg);
+  }
+
+  .accordion__header:hover {
+    background-color: rgb(202, 191, 191);
+  }
+
+  .accordion__item:not(.accordion__item_show) .accordion__header {
+    border-bottom-right-radius:  10px;
+    border-bottom-left-radius:  10px;
+  }
+
+  .accordion__content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+    font-family: "Gilroy";
+    font-size: 1.1em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    background: #fff;
+    border-bottom-right-radius:  10px;
+    border-bottom-left-radius:  10px;
+  }
+
+  .accordion__content a {
+    position: relative;
+    display: block;
+    padding: 0.5rem 10px;
+    color: #212529;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid rgb(0 0 0 / 12.5%);
+  }
+
+  .accordion__content a:last-child {
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+    
+  }
+
+  .accordion__content a:hover {
+    background-color: #f8f9fa;
+  }
+
+  .accordion__item:not(.accordion__item_show) .accordion__body {
+    display: none;
+
+  }
+
+/*accordion*/
+
+.FAQ {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.FAQ >h1{
+.faq_h1 {
     font-family: "Gilroy-Bold";
     text-align: center;
     margin-top: 30px;
-    font-size: 4em;
+    margin-bottom: 30px;
+    font-size: 3em;
 }
 
-.faq_img{
-    width: 40%;
-    
+.faq_img {
+    width: 500px;
+    height: 350px;
+}
+
+.accordion {
+    width: 30%;
+}
+
+@media (max-width: 800px) {
+    .faq_img {
+        display: none;
+    }
+
+    .FAQ {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .accordion {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    .heder {
+        justify-content: space-evenly;
+    }
+
+    .heder .download_btn {
+        display: none;
+    }
+
+    .item {
+        margin-right: 0px;
+    }
 }
