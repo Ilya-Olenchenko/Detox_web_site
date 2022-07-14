@@ -109,7 +109,9 @@ body {
     margin-left: auto;
     background-repeat: no-repeat;
     background-size: 1.25rem;
-    content: "\2228";
+    content: "";
+    background-image: url(/img/help/down_icon.svg);
+    color: black;
     transition: transform 0.2s ease-out;
   }
 
@@ -152,8 +154,7 @@ body {
 
   .accordion__content a:last-child {
     border-bottom-right-radius: inherit;
-    border-bottom-left-radius: inherit;
-    
+    border-bottom-left-radius: inherit; 
   }
 
   .accordion__content a:hover {
@@ -162,7 +163,6 @@ body {
 
   .accordion__item:not(.accordion__item_show) .accordion__body {
     display: none;
-
   }
 
 /*accordion*/
@@ -171,27 +171,99 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
-.faq_h1 {
+
+.h1_ {
     font-family: "Gilroy-Bold";
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
     font-size: 3em;
 }
+.feedback{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Gilroy";
 
+    padding-bottom: 100px; /*ПРИБРАТИ ПРИ ДОДАВАННІ КОНТЕНТУ НИЖЧЕ ФОРМИ ДЛЯ зворотнього зв'язку*/
+}
+
+.feedback_dialog{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
 .faq_img {
     width: 500px;
     height: 350px;
+}
+
+.feedback_img{
+    width: 500px;
+    height: 350px;  
 }
 
 .accordion {
     width: 30%;
 }
 
+.feedback_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback_form > form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0.125rem 1rem rgb(0 0 0 / 15%);
+}
+
+.feedback > p{
+    /* font-family: "Gilroy-Bold"; */
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+form > .input{
+    text-decoration: none;
+    border: 0;
+    background-color: #E6E6E6;
+    border-radius: 5px;
+}
+
+form > .button{
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: orange;
+    border-radius: 50px;
+    border-color: white;
+    width: 50px;
+    height: 50px;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 2.5rem;
+    background-image: url(/img/help/icons8.svg);
+    background-position: center;
+}
+
+
+
+
 @media (max-width: 800px) {
     .faq_img {
+        display: none;
+    }
+
+    .feedback_img{
         display: none;
     }
 
@@ -201,7 +273,17 @@ body {
         justify-content: center;
     }
 
+    .feedback{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
     .accordion {
+        width: 90%;
+    }
+    
+    .feedback_form{
         width: 90%;
     }
 }
