@@ -11,29 +11,6 @@
     <script type="text/javascript" src="js/javascript_help.js" defer></script>
     <title>Help</title>
 </head>
-<script>
-    $(function () {
-        'use strict';
-        $('form').on('submit', function (e) {
-            e.preventDefault();
-            var fd = new FormData(this);
-            $.ajax({
-                url: 'mail.php',
-                type: 'POST',
-                contentType: false,
-                processData: false,
-                data: fd,
-                success: function (msg) {
-                    if (msg == 'ok') {
-                        alert('Отправлено');
-                    } else {
-                        alert('Ошибка')
-                    }
-                }
-            });
-        });
-    });
-</script>
 
 <body style="background-color: #E6E6E6;">
     <div class="heder">
