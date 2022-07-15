@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/help.css">
-    <script type="text/javascript" src="js\jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="js\javascript_help.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="js/javascript_help.js" defer></script>
 
     <title>Help</title>
 </head>
@@ -80,108 +81,19 @@
     <div class="feedback">
         <div class="feedback_form">
             <p>Є питання? Тоді напиши нам</p>
-                <form>
-                    <input type="text" class="input" id="name" placeholder="Ім'я">
-                    <input type="text" class="input" id="Email" placeholder="Пошта">
-                    <textarea maxlength="1000" type="text" class="input" id="text" placeholder="Ваше запитання"></textarea>
-                    <!-- <input type="text" class="input" id="text" placeholder="Ваше запитання"> -->
+            <form>
+                <input type="text" class="input" id="name" name="name" placeholder="Ім'я" required>
+                <input type="text" class="input" id="email" name="email" placeholder="Пошта" required>
+                <textarea maxlength="1000" type="text" class="input" id="text" name="message"
+                    placeholder="Ваше запитання"></textarea required>
+                <!-- <input type="text" class="input" id="text" placeholder="Ваше запитання"> -->
 
-                    <input type="button" class="button" value="">
-                </form>
-            </div>
+                <input type="button" class="button" value="">
+            </form>
+        </div>
         <img class="feedback_img" src="img/help/help_2.png" alt="">
     </div>
     <!--</div>-->
-
-    <script>
-        class ItcAccordion {
-            constructor(target, config) {
-                this._el = typeof target === 'string' ? document.querySelector(target) : target;
-                const defaultConfig = {
-                    alwaysOpen: true,
-                    duration: 350
-                };
-                this._config = Object.assign(defaultConfig, config);
-                this.addEventListener();
-            }
-            addEventListener() {
-                this._el.addEventListener('click', (e) => {
-                    const elHeader = e.target.closest('.accordion__header');
-                    if (!elHeader) {
-                        return;
-                    }
-                    if (!this._config.alwaysOpen) {
-                        const elOpenItem = this._el.querySelector('.accordion__item_show');
-                        if (elOpenItem) {
-                            elOpenItem !== elHeader.parentElement ? this.toggle(elOpenItem) : null;
-                        }
-                    }
-                    this.toggle(elHeader.parentElement);
-                });
-            }
-            show(el) {
-                const elBody = el.querySelector('.accordion__body');
-                if (elBody.classList.contains('collapsing') || el.classList.contains('accordion__item_show')) {
-                    return;
-                }
-                elBody.style['display'] = 'block';
-                const height = elBody.offsetHeight;
-                elBody.style['height'] = 0;
-                elBody.style['overflow'] = 'hidden';
-                elBody.style['transition'] = `height ${this._config.duration}ms ease`;
-                elBody.classList.add('collapsing');
-                el.classList.add('accordion__item_slidedown');
-                elBody.offsetHeight;
-                elBody.style['height'] = `${height}px`;
-                window.setTimeout(() => {
-                    elBody.classList.remove('collapsing');
-                    el.classList.remove('accordion__item_slidedown');
-                    elBody.classList.add('collapse');
-                    el.classList.add('accordion__item_show');
-                    elBody.style['display'] = '';
-                    elBody.style['height'] = '';
-                    elBody.style['transition'] = '';
-                    elBody.style['overflow'] = '';
-                }, this._config.duration);
-            }
-            hide(el) {
-                const elBody = el.querySelector('.accordion__body');
-                if (elBody.classList.contains('collapsing') || !el.classList.contains('accordion__item_show')) {
-                    return;
-                }
-                elBody.style['height'] = `${elBody.offsetHeight}px`;
-                elBody.offsetHeight;
-                elBody.style['display'] = 'block';
-                elBody.style['height'] = 0;
-                elBody.style['overflow'] = 'hidden';
-                elBody.style['transition'] = `height ${this._config.duration}ms ease`;
-                elBody.classList.remove('collapse');
-                el.classList.remove('accordion__item_show');
-                elBody.classList.add('collapsing');
-                window.setTimeout(() => {
-                    elBody.classList.remove('collapsing');
-                    elBody.classList.add('collapse');
-                    elBody.style['display'] = '';
-                    elBody.style['height'] = '';
-                    elBody.style['transition'] = '';
-                    elBody.style['overflow'] = '';
-                }, this._config.duration);
-            }
-            toggle(el) {
-                el.classList.contains('accordion__item_show') ? this.hide(el) : this.show(el);
-            }
-        }
-
-        new ItcAccordion(document.querySelector('.accordion'), {
-            alwaysOpen: false
-        });
-
-
-        // $("textarea").keyup(function() {
-        // if (this.value.length > 3)
-        // this.value = this.value.substr(0, 3);
-        // });
-    </script>
 </body>
 
 </html>
