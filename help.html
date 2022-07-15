@@ -77,19 +77,18 @@
 
     <h1 class="h1_">Зв'язатися з нами</h1>
 
-
     <div class="feedback">
         <div class="feedback_form">
             <p>Є питання? Тоді напиши нам</p>
-            <form>
-                <input type="text" class="input" id="name" placeholder="Ім'я">
-                <input type="text" class="input" id="Email" placeholder="Пошта">
-                <input type="text" class="input" id="text" placeholder="Ваше запитання">
+                <form>
+                    <input type="text" class="input" id="name" placeholder="Ім'я">
+                    <input type="text" class="input" id="Email" placeholder="Пошта">
+                    <textarea maxlength="1000" type="text" class="input" id="text" placeholder="Ваше запитання"></textarea>
+                    <!-- <input type="text" class="input" id="text" placeholder="Ваше запитання"> -->
 
-                <input type="button" class="button" value="">
-            </form>
-        </div>
-
+                    <input type="button" class="button" value="">
+                </form>
+            </div>
         <img class="feedback_img" src="img/help/help_2.png" alt="">
     </div>
     <!--</div>-->
@@ -176,6 +175,12 @@
         new ItcAccordion(document.querySelector('.accordion'), {
             alwaysOpen: false
         });
+
+
+        // $("textarea").keyup(function() {
+        // if (this.value.length > 3)
+        // this.value = this.value.substr(0, 3);
+        // });
     </script>
 </body>
 
