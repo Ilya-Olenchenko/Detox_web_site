@@ -9,10 +9,31 @@
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
     <script type="text/javascript" src="js/javascript_help.js" defer></script>
-
     <title>Help</title>
 </head>
-
+<script>
+    $(function(){
+     'use strict';
+    $('#form').on('submit', function(e){
+     e.preventDefault();
+     var fd = new FormData( this );
+     $.ajax({
+     url: 'mail.php',
+     type: 'POST',
+     contentType: false, 
+     processData: false, 
+     data: fd,
+     success: function(msg){
+    if(msg == 'ok') {
+     alert('Отправлено');
+    } else {
+     alert('Ошибка')
+    }
+     }
+     });
+     });
+    });
+    </script>
 <body style="background-color: #E6E6E6;">
     <div class="heder">
         <a href="index.html" class="item home">Головна</a>
@@ -81,14 +102,14 @@
     <div class="feedback">
         <div class="feedback_form">
             <p>Є питання? Тоді напиши нам</p>
-            <form>
+            <form action="mail.php" method="POST">
                 <input type="text" class="input" id="name" name="name" placeholder="Ім'я" required>
                 <input type="text" class="input" id="email" name="email" placeholder="Пошта" required>
                 <textarea maxlength="1000" type="text" class="input" id="text" name="message"
-                    placeholder="Ваше запитання"></textarea required>
+                    placeholder="Ваше запитання"></textarea>
                 <!-- <input type="text" class="input" id="text" placeholder="Ваше запитання"> -->
 
-                <input type="button" class="button" value="">
+                <button type="submit" class="button" value=""></button>
             </form>
         </div>
         <img class="feedback_img" src="img/help/help_2.png" alt="">
