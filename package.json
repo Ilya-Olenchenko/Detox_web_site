@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemailer": "^6.7.7"
+  },
+  "name": "detox_web_site",
+  "description": "##### Веб сайт проєкту",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: ni test specified\" && extit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ilya-Olenchenko/Detox_web_site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ilya-Olenchenko/Detox_web_site/issues"
+  },
+  "homepage": "https://github.com/Ilya-Olenchenko/Detox_web_site#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
