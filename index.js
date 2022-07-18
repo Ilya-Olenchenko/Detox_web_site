@@ -8,6 +8,7 @@ const app = express()
 app.use(express.json());
 
 app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/style/main.css'));
 
 app.get('/', (req, res) => {
      res.sendFile(path.resolve(__dirname, 'index.html'))
