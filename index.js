@@ -1,11 +1,16 @@
 import express from 'express'
 import path from 'path'
-
+import styles from ".../style/"
 const __dirname = path.resolve()
 
 const PORT = process.env.PORT ?? 3000
 const app = express()
-app.use(express.static(__dirname + '/'));
+
+// app.use(express.json());
+express.static(path.join(__dirname, 'css'))
+
+// app.use(express.static(__dirname + '/'));
+app.use(express.static(path.join(__dirname, 'css')))
 
 app.get('/', (req, res) => {
      res.sendFile(path.resolve(__dirname, 'index.html'))
@@ -18,7 +23,5 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'help.html'))
 })
-
-app.post('help')
 
 app.listen(PORT, () => console.log(`server listening at http://localhost:${PORT}...`))

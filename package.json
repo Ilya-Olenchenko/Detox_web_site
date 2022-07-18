@@ -4,7 +4,7 @@
     "nodemailer": "^6.7.7"
   },
   "name": "detox_web_site",
-  "description": "##### Веб сайт проєкту",
+  "description": "",
   "version": "1.0.0",
   "main": "index.js",
   "engines": {
