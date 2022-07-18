@@ -10,6 +10,8 @@ app.use(express.json());
 app.use(express.static(__dirname + '/'));
 app.use(express.static(__dirname + '/style'));
 app.use(express.static(__dirname + '/js'));
+app.use(express.static(__dirname + '/img'));
+app.use(express.static(__dirname + '/fonts'));
 
 app.get('/', (req, res) => {
      res.sendFile(path.resolve(__dirname, 'index.html'))
