@@ -8,8 +8,7 @@ const app = express()
 //app.use(express.json());
 express.static(path.join(__dirname, 'css'))
 
-// app.use(express.static(__dirname + '/'));
- app.use(express.static(path.join(__dirname, 'css')))
+app.use(express.static(__dirname + '/public/'));
 
 app.get('/', (req, res) => {
      res.sendFile(path.resolve(__dirname, 'index.html'))
