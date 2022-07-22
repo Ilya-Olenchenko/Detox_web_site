@@ -188,11 +188,23 @@ body {
     justify-content: space-evenly;
     align-items: center;
     font-family: "Gilroy";
-
-    padding-bottom: 100px;
-    /*ПРИБРАТИ ПРИ ДОДАВАННІ КОНТЕНТУ НИЖЧЕ ФОРМИ ДЛЯ зворотнього зв'язку*/
 }
 
+.conditions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Gilroy";
+}
+
+.privacy{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Gilroy";
+}
 .feedback_dialog {
     display: flex;
     flex-direction: column;
@@ -203,7 +215,15 @@ body {
     width: 500px;
     height: 350px;
 }
+.conditions_img{
+    width: 500px;
+    height: 450px;
+}
 
+.privacy_img{
+    width: 500px;
+    height: 350px;
+}
 .feedback_img {
     width: 500px;
     height: 350px;
@@ -219,8 +239,39 @@ body {
     justify-content: space-around;
     width: 25%;
 }
+.conditions_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25%;
+}
+
+.privacy_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25%;
+}
 
 .feedback_form>form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0.125rem 1rem rgb(0 0 0 / 15%);
+}
+
+.conditions_form>form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0.125rem 1rem rgb(0 0 0 / 15%);
+}
+
+.privacy_form>form {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -233,10 +284,32 @@ body {
     /* font-family: "Gilroy-Bold"; */
     font-size: 1.2em;
     font-weight: 600;
-    text-align: center;
     padding-bottom: 20px;
+    text-align: center;
 }
 
+.conditions_form>p {
+    /* font-family: "Gilroy-Bold"; */
+    font-size: 1.2em;
+    font-weight: 600;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.privacy_form>p{
+    font-size: 1.2em;
+    font-weight: 600;
+    padding-bottom: 20px;
+    text-align: center;
+}
+form>p{
+    font-size: 1em;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: gray;
+    text-align: center;
+}
 form>.input {
     text-decoration: none;
     border: 0;
@@ -252,7 +325,6 @@ form>.input {
 }
 
 form> #text{
-    padding-bottom: 40px;
     resize: vertical;
     min-height: 80px;
     max-height: 650px;
@@ -274,6 +346,27 @@ form>.button {
     background-image: url(/img/help/icons8.svg);
     background-position: center;
     margin: auto;
+    margin-bottom: 10px;
+}
+
+form>.button_privacy {
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: orange;
+    border-radius: 50px;
+    border-color: white;
+    width: 120px;
+    height: 40px;
+    content: "Політика";
+    background-repeat: no-repeat;
+    background-size: 2.5rem;
+    background-position: center;
+    margin: auto;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 @media (max-width: 800px) {
@@ -284,6 +377,13 @@ form>.button {
     .feedback_img {
         display: none;
     }
+    
+    .conditions_img {
+        display: none;
+    }
+    .privacy_img{
+        display: none;
+    }
 
     .FAQ {
         display: flex;
@@ -292,7 +392,7 @@ form>.button {
     }
 
     .accordion {
-        width: 60%;
+        width: 80%;
     }
 
     .feedback {
@@ -302,7 +402,32 @@ form>.button {
     }
     
     .feedback_form {
-        width: 60%;
+        width: 80%;
+    }
+
+    .conditions{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .conditions_form{
+        width: 80%;
+    }
+
+    .privacy{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .privacy_form{
+        width: 80%;
+    }
+
+    .h1_ {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 2.5em;
     }
 }
 

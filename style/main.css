@@ -420,7 +420,7 @@ footer>.flex-container>.contacts>a>.instagram {
   }
 }
 
-@media screen and (max-width: 500px) and (max-height:800px) {
+@media screen and (max-width: 500px) and (max-height:900px) {
   footer {
     height: 320px;
   }

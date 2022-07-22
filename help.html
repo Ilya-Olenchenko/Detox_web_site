@@ -17,7 +17,7 @@
         <a href="/" class="item home">Головна</a>
         <a href="" class="item sign">Вхід</a>
     </div>
-    <!--<div class="container">-->
+    <!--class="accordion">-->
     <h1 class="h1_">FAQ</h1>
     <div class="FAQ">
         <div id="accordion" class="accordion">
@@ -74,25 +74,51 @@
         </div>
         <img class="faq_img" src="/help/help_1.png" alt="">
     </div>
-
     <h1 class="h1_">Зв'язатися з нами</h1>
-
+    <!--class="feedback">-->
     <div class="feedback">
         <div class="feedback_form">
             <p>Є питання? Тоді напиши нам</p>
-            <form action="mail.php" method="POST">
+            <form>
                 <input type="text" class="input" id="name" name="name" placeholder="Ім'я" required>
                 <input type="text" class="input" id="email" name="email" placeholder="Пошта" required>
                 <textarea maxlength="1000" type="text" class="input" id="text" name="message"
                     placeholder="Ваше запитання"></textarea>
                 <!-- <input type="text" class="input" id="text" placeholder="Ваше запитання"> -->
-
                 <button type="submit" class="button" value=""></button>
             </form>
         </div>
         <img class="feedback_img" src="/help/help_2.png" alt="">
     </div>
-    <!--</div>-->
+
+
+
+    <h1 class="h1_">Умови використання</h1>
+    <!--class="conditions">-->
+    <div class="conditions">
+        <div class="conditions_form">
+            <p>Напишіть пошту і ми надішлемо вам умови використання</p>
+            <form>
+                <input type="text" class="input" id="name" name="name" placeholder="Ім'я" required>
+                <input type="text" class="input" id="email" name="email" placeholder="Пошта" required>
+                <button type="submit" class="button" value=""></button>
+            </form>
+        </div>
+        <img class="conditions_img" src="/help/help_3.png" alt="">
+    </div>
+
+    <h1 class="h1_">Конфіденційність</h1>
+    <!--class="conditions">-->
+    <div class="privacy">
+        <div class="privacy_form">
+            <p>Політика конфіденційності</p>
+            <form>
+                <p>Натисніть, щоб прочитати</p>
+                <button type="submit" class="button_privacy" value="">Політика</button>
+            </form>
+        </div>
+        <img class="privacy_img" src="/help/help_4.png" alt="">
+    </div>
 </body>
 
 </html>
