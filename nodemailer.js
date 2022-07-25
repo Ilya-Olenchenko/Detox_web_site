@@ -1,12 +1,12 @@
-const nodemailer = require("nodemailer");
+const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
+    host: 'smtp.ukr.net',
     port: 465,
     secure: true,
     auth: {
-        user: 'dungeon.master.card@gmail.com',
-        pass: 'Paketk@24',
+        user: 'olenchenko.ilya@ukr.net',
+        pass: 'xMtFO9eY34W50isD'
     }
 })
 

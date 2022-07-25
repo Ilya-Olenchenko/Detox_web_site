@@ -10,7 +10,6 @@
   "engines": {
     "node": "14.x"
   },
-  "type": "module",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: ni test specified\" && extit 1"
