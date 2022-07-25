@@ -36,7 +36,7 @@ app.post('/help', (req, res) => {
     }
     mailer(message_to_base)
     mailer(message_to_client)
-    res.redirect('/help')
+    //res.redirect('/help')
 })
 
 app.get('/', (req, res) => {
